@@ -1,0 +1,28 @@
+.sidebar {
+    background-color: #F56E0F;
+    height: 100vh;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.sidebar .top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.625rem 0.625rem;
+    border-bottom: 1px solid #FBFBFB;
+}
+
+.sidebar .top img {
+    width: 40px;
+}
+
+.sidebar .top h3 {
+    color: #FBFBFB;
+    font-weight: 400;
+}
+
+.sidebar .bottom {
+    position: relative;
+}

@@ -1,0 +1,12 @@
+<aside class="sidebar">
+    <div class="top">
+        <img src="jira.png" alt="">
+        <h3>Jira</h3>
+    </div>
+    
+    <div class="bottom">
+        @for (link of links; track link.id) {
+            <app-link-item [item]="link"/>
+        }
+    </div>
+</aside>
