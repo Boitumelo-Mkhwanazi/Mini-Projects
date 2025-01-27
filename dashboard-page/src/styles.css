@@ -9,3 +9,13 @@
 body {
     font-family: "Poppins", serif;
 }
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #FBFBFB;
+}

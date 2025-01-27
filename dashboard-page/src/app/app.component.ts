@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-root',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
