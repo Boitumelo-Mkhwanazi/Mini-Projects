@@ -5,9 +5,9 @@ nav {
     padding: 10px 20px;
 }
 
-nav .left h4 {
-    font-size: 14px;
-    font-weight: 600;
+nav .left h2 {
+    font-size: 16px;
+    font-weight: 700;
 }
 
 nav .left span {
@@ -46,4 +46,12 @@ nav .right .setting-container {
 nav .right .mail-container ion-icon,
 nav .right .setting-container ion-icon {
     font-size: 20px;
+}
+
+#sales {
+    padding: 10px 20px;
+}
+
+#sales p {
+    font-weight: 500;
 }
