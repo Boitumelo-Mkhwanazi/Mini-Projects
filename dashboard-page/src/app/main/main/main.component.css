@@ -1,0 +1,49 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .left h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav .left span {
+    font-size: 12px;
+    color: #878787;
+}
+
+nav .right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav .right .search-bar {
+    display: flex;
+    align-content: center;
+    gap: 0.85rem;
+    padding: 10px;
+    border: 1px solid #878787;
+    border-radius: 5px;
+}
+
+nav .right .search-bar input {
+    outline: none;
+    border: none;
+}
+
+nav .right .mail-container,
+nav .right .setting-container {
+    padding: 5px;
+    border: 1px solid #878787;
+    border-radius: 5px;
+}
+
+nav .right .mail-container ion-icon,
+nav .right .setting-container ion-icon {
+    font-size: 20px;
+}
