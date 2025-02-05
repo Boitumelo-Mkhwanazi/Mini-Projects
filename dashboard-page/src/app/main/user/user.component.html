@@ -1,0 +1,11 @@
+<div class="sales-person">
+    <div class="profile-info">
+        <a href=""><img [src]="user().image" alt=""></a>
+        <span>{{ user().name }}</span>
+    </div>
+    <span class="price">R {{ user().price }}</span>
+    <span class="product-count">{{ user().countProducts }} Products</span>
+    <span class="package">{{ user().packageCount }} Premium</span>
+    <span class="status">+{{ user().status }}</span>
+    <span><ion-icon name="ellipsis-vertical"></ion-icon></span>
+</div>

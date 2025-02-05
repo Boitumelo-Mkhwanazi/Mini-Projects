@@ -1,12 +1,51 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { UserComponent } from "../user/user.component";
+
+interface UserArray {
+  id: string,
+  image: string,
+  name: string,
+  price: number,
+  countProducts: number,
+  packageCount: number,
+  status: string
+}
 
 @Component({
   selector: 'app-main',
-  imports: [],
+  imports: [UserComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
 export class MainComponent {
-
+  users : UserArray[] = [
+    {
+      id: 'u1',
+      image: 'profile-picture.jpg',
+      name: 'Boitumelo Mkhwanazi',
+      price: 2500,
+      countProducts: 120,
+      packageCount: 105,
+      status: 'Gold'
+    },
+    {
+      id: 'u2',
+      image: 'profile-picture.jpg',
+      name: 'Boitumelo Mkhwanazi',
+      price: 2500,
+      countProducts: 120,
+      packageCount: 105,
+      status: 'Gold'
+    },
+    {
+      id: 'u3',
+      image: 'profile-picture.jpg',
+      name: 'Boitumelo Mkhwanazi',
+      price: 2500,
+      countProducts: 120,
+      packageCount: 105,
+      status: 'Gold'
+    }
+  ]
 }

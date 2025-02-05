@@ -1,0 +1,43 @@
+.sales-person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #878787;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sales-person:hover {
+    background-color: #e0e0e0;
+}
+
+.sales-person .profile-info {
+    display: flex;
+    gap: 0.35rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sales-person .profile-info a img {
+    width: 35px;
+    height: 35px;
+    border-radius: 17.5px;
+}
+
+.sales-person .profile-info span,
+.sales-person ion-icon {
+    color: black;
+}
+
+.sales-person span {
+    color: #878787;
+}
+
+.sales-person .status {
+    color: #FFD700;
+}
+
+.sales-person ion-icon {
+    font-size: 20px;
+}
