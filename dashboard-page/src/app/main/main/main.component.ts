@@ -1,5 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { UserComponent } from "../user/user.component";
+import { UserDialogComponent } from "../user-dialog/user-dialog.component";
 
 interface UserArray {
   id: string,
@@ -13,12 +14,14 @@ interface UserArray {
 
 @Component({
   selector: 'app-main',
-  imports: [UserComponent],
+  imports: [UserComponent, UserDialogComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
 export class MainComponent {
+
+  isDialogOpen = true;
   users : UserArray[] = [
     {
       id: 'u1',

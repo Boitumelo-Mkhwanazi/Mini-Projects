@@ -1,4 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, input } from '@angular/core';
+import { UserDialogComponent } from "../user-dialog/user-dialog.component";
 
 interface UserArray {
   image: string,
@@ -11,7 +12,7 @@ interface UserArray {
 
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [UserDialogComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
