@@ -40,7 +40,7 @@ export class MainComponent {
       price: 2500,
       countProducts: 120,
       packageCount: 105,
-      status: 'Gold'
+      status: 'Silver'
     },
     {
       id: 'u3',
@@ -54,10 +54,9 @@ export class MainComponent {
   ]
 
   get selectedUser() {
-    return this.users.find((user) => {
-      user.id === this.selectedUserId
-    });
+    return this.users.find(user => user.id === this.selectedUserId);
   }
+  
 
   showUserDialog(id: string) {
     this.selectedUserId = id;

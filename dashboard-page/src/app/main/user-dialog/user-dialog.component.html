@@ -1,9 +1,9 @@
 <div class="backdrop" (click)="closeDialog()"></div>
 <dialog open>
   <img src="profile-picture.jpg" alt="">
-  <span>Boitumelo Mkhwanazi</span>
-  <span>R25000</span>
-  <span>120 Products</span>
-  <span>105 Premium</span>
-  <span class="status">+Gold</span>
+  <span> {{ user().name }} </span>
+  <span> {{ user().price }} </span>
+  <span> {{ user().countProducts }} </span>
+  <span> {{ user().packageCount }} </span>
+  <span class="status">+{{ user().status }} </span>
 </dialog>
