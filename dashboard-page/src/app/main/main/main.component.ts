@@ -20,8 +20,9 @@ interface UserArray {
   styleUrl: './main.component.css'
 })
 export class MainComponent {
+  isDialogOpen = false;
+  selectedUserId!: string;
 
-  isDialogOpen = true;
   users : UserArray[] = [
     {
       id: 'u1',
@@ -51,4 +52,19 @@ export class MainComponent {
       status: 'Gold'
     }
   ]
+
+  get selectedUser() {
+    return this.users.find((user) => {
+      user.id === this.selectedUserId
+    });
+  }
+
+  showUserDialog(id: string) {
+    this.selectedUserId = id;
+    this.isDialogOpen = true;
+  }
+
+  closeDialog() {
+    this.isDialogOpen = false;
+  }
 }

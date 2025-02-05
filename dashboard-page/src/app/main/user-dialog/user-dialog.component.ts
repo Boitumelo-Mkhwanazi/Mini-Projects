@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-user-dialog',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './user-dialog.component.css'
 })
 export class UserDialogComponent {
+  voidOutput = output<void>();
+
+  closeDialog() {
+    this.voidOutput.emit();
+  }
 
 }

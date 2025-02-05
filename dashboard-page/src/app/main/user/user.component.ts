@@ -1,7 +1,7 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, input } from '@angular/core';
-import { UserDialogComponent } from "../user-dialog/user-dialog.component";
+import { Component, CUSTOM_ELEMENTS_SCHEMA, input, output } from '@angular/core';
 
 interface UserArray {
+  id: string,
   image: string,
   name: string,
   price: number,
@@ -12,11 +12,15 @@ interface UserArray {
 
 @Component({
   selector: 'app-user',
-  imports: [UserDialogComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
 export class UserComponent {
   user = input.required<UserArray>();
+  userId = output<string>();
+
+  showUserDialog() {
+    this.userId.emit(this.user().id);
+  }
 }
