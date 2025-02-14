@@ -73,4 +73,12 @@ nav .right .setting-container ion-icon {
         display: block;
         padding: 10px 20px;
     }
+
+    nav .left h2 {
+        font-size: 16px;
+    }
+
+    nav .right .search-bar input {
+        display: none;
+    }
 }

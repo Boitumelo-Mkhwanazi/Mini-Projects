@@ -41,3 +41,12 @@
 .sales-person ion-icon {
     font-size: 20px;
 }
+
+@media screen and (max-width: 699px) {
+    .sales-person .price,
+    .sales-person .product-count,
+    .sales-person .package,
+    .sales-person .status {
+        display: none;
+    }
+}
