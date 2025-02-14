@@ -1,7 +1,10 @@
-<aside class="sidebar">
+<aside class="sidebar" [class.active]="isMenuOpen()">
     <div class="top">
         <img src="jira.png" alt="">
         <h3>Jira</h3>
+        <div class="close" >
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
     </div>
     
     <div class="bottom">

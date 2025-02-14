@@ -64,6 +64,13 @@ nav .right .setting-container ion-icon {
 }
 
 .icon {
-    display: block;
-    padding: 10px 20px;
+    display: none;
+}
+
+
+@media screen and (max-width: 699px) {
+    .icon {
+        display: block;
+        padding: 10px 20px;
+    }
 }

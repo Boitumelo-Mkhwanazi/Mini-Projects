@@ -23,6 +23,18 @@
     font-weight: 400;
 }
 
+.sidebar .close {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    display: none;
+}
+
+.sidebar .close ion-icon {
+    font-size: 24px;
+    color: #FBFBFB;
+}
+
 .sidebar .bottom {
     position: relative;
 }
@@ -36,6 +48,20 @@
 @media screen and (max-width: 699px) {
     .sidebar {
         position: fixed;
-        left: -100%;
+        left: -250px;
+        width: 250px;
+        z-index: 2;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar .top {
+        position: relative;
+    }
+
+    .sidebar .close {
+        display: block;
     }
 }

@@ -2,7 +2,7 @@
     <app-user-dialog (voidOutput)="closeDialog()" [user]="selectedUser!"/>
 }
 
-<div class="icon">
+<div class="icon" (click)="onOpenMenu()" >
     <ion-icon name="grid-outline"></ion-icon>
 </div>
 

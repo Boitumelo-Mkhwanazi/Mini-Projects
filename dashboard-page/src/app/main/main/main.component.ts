@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, output, signal } from '@angular/core';
 import { UserComponent } from "../user/user.component";
 import { UserDialogComponent } from "../user-dialog/user-dialog.component";
 
@@ -22,6 +22,8 @@ interface UserArray {
 export class MainComponent {
   isDialogOpen = false;
   selectedUserId!: string;
+  openClose : boolean = false;
+  outGoingMenu = output<boolean>();
 
   users : UserArray[] = [
     {
@@ -56,7 +58,6 @@ export class MainComponent {
   get selectedUser() {
     return this.users.find(user => user.id === this.selectedUserId);
   }
-  
 
   showUserDialog(id: string) {
     this.selectedUserId = id;
@@ -65,5 +66,10 @@ export class MainComponent {
 
   closeDialog() {
     this.isDialogOpen = false;
+  }
+
+  onOpenMenu() {
+    this.openClose = !this.openClose;
+    this.outGoingMenu.emit(this.openClose);
   }
 }
