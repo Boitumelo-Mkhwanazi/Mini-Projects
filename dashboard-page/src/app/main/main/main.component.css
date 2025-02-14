@@ -62,3 +62,8 @@ nav .right .setting-container ion-icon {
     flex-direction: column;
     gap: 1rem;
 }
+
+.icon {
+    display: block;
+    padding: 10px 20px;
+}

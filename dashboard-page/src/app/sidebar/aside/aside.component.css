@@ -26,3 +26,16 @@
 .sidebar .bottom {
     position: relative;
 }
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .sidebar .top h3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .sidebar {
+        position: fixed;
+        left: -100%;
+    }
+}
