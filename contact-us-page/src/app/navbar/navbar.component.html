@@ -5,11 +5,10 @@
             <a href="">Apple</a>
         </div>
         <div class="left-right">
-            <a href="">Pricing</a>
-            <a href="">Features</a>
-            <a href="">Solutions</a>
-            <a href="">Resources</a>
-            <a href="">About us</a>
+            @for (linkItem of linkItems; track linkItem.id) {
+                <app-link-item [linkItem]="linkItem" />
+            }
+            <app-link-item [linkItem]="linkItems[0]" />
         </div>
     </div>
     <div class="right">

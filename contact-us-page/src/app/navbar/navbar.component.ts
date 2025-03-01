@@ -1,4 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { LinkItemComponent } from "./link-item/link-item.component";
 
 interface LinkType {
   id: string,
@@ -7,7 +8,7 @@ interface LinkType {
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [LinkItemComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
@@ -32,7 +33,7 @@ export class NavbarComponent {
     },
     {
       id: '5',
-      text: 'About u'
+      text: 'About us'
     }
   ]
 }

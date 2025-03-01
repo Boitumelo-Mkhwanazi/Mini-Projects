@@ -30,26 +30,6 @@ nav .left .left-right {
     gap: 1.5rem;
 }
 
-nav .left .left-right a {
-    position: relative;
-    padding: 0.5rem 0;
-}
-
-nav .left .left-right a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: black;
-    height: 2.5px;
-    width: 0;
-    transition: 0.2s ease-in;
-}
-
-nav .left .left-right a:hover::before {
-    width: 100%;
-}
-
 nav .right {
     display: flex;
     align-items: center;
