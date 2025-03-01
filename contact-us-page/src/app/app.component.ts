@@ -16,8 +16,7 @@ interface LinkType {
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'contact-us-page';
-  selectedCategoryItem!: string;
+  selectedCategoryCareer!: string;
 
   categories: LinkType[] = [
     {
@@ -26,15 +25,15 @@ export class AppComponent {
     }, 
     {
       id: '2',
-      text: 'UI/UX Designers'
+      text: 'UI/UX Designer'
     },
     {
       id: '3',
-      text: 'Software Developers'
+      text: 'Software Engineer'
     },
     {
       id: '4',
-      text: 'Software Testers'
+      text: 'Software Tester'
     },
     {
       id: '5',
@@ -42,14 +41,10 @@ export class AppComponent {
     }
   ]
 
-  onSelectedCategory(isSelected: string) {
-    this.selectedCategoryItem = isSelected;
-  }
-
   users: User[] = [
     {
         id: "1",
-        name: "John Doe",
+        name: "Boitumelo Mkhwanazi",
         title: "Software Engineer",
         image: "team-member-2.avif"
     },
@@ -68,7 +63,7 @@ export class AppComponent {
     {
         id: "4",
         name: "Bob Brown",
-        title: "Software Engineer",
+        title: "Software Tester",
         image: "team-member-2.avif"
     },
     {
@@ -92,7 +87,7 @@ export class AppComponent {
     {
         id: "8",
         name: "Fiona Harris",
-        title: "UI/UX Designer",
+        title: "Software Tester",
         image: "team-member-2.avif"
     },
     {
@@ -119,5 +114,17 @@ export class AppComponent {
         title: "Marketing",
         image: "team-member-2.avif"
     }
-];
+  ];
+
+  onSelectedCategory(selectedUserCareer: string) {
+    this.selectedCategoryCareer = selectedUserCareer;
+  }
+
+  get selectedCareerArray () {
+    if ( this.selectedCategoryCareer === "View All") {
+      return this.users;
+    }
+    return this.users.filter((user) => user.title === this.selectedCategoryCareer);
+  }
+  
 }

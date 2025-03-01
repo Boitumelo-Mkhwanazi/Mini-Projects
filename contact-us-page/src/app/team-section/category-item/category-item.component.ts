@@ -17,6 +17,6 @@ export class CategoryItemComponent {
   selectedCategory = output<string>();
 
   onSelect() {
-    this.selectedCategory.emit(this.category().id);
+    this.selectedCategory.emit(this.category().text);
   }
 }

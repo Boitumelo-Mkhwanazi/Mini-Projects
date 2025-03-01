@@ -8,12 +8,12 @@
 <section id="team">
     <div class="category">
         @for ( category of categories; track category.id) {
-            <app-category-item [category]="category" [selectedCategoryItem]="category.id === selectedCategoryItem" (selectedCategory)="onSelectedCategory($event)"/>
+            <app-category-item [category]="category" [selectedCategoryItem]="category.text === selectedCategoryCareer" (selectedCategory)="onSelectedCategory($event)"/>
         }
     </div>
 
     <div class="team-members">
-        @for ( user of users; track user.id ) {
+        @for ( user of selectedCareerArray; track user.id ) {
             <app-team-member [user]="user" />
         }
     </div>
