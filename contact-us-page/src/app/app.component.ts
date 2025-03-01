@@ -16,7 +16,7 @@ interface LinkType {
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  selectedCategoryCareer!: string;
+  selectedCategoryCareer: string = "View All";
 
   categories: LinkType[] = [
     {
@@ -121,7 +121,7 @@ export class AppComponent {
   }
 
   get selectedCareerArray () {
-    if ( this.selectedCategoryCareer === "View All") {
+    if ( this.selectedCategoryCareer === "View All" ) {
       return this.users;
     }
     return this.users.filter((user) => user.title === this.selectedCategoryCareer);
