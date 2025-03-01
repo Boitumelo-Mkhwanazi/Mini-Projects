@@ -16,3 +16,18 @@
         <a href="" class="button">Get Started</a>
     </div>
 </nav>
+
+<section id="hero">
+    <h2>Meet the team that makes <br> the magic happen</h2>
+    <p>Meet our diverse team of world-class creators, designers, and problem solvers</p>
+</section>
+
+<section id="team">
+    <div class="category">
+        @for ( category of categories; track category.id) {
+            <app-category-item [category]="category" [selectedCategoryItem]="category.id === selectedCategoryItem" (selectedCategory)="onSelectedCategory($event)"/>
+        }
+    </div>
+
+
+</section>

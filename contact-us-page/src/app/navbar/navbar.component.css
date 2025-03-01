@@ -43,3 +43,26 @@ nav .right .button {
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 6rem;
+}
+
+#hero h2 {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 3.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#team {
+    text-align: center;
+}
+
+#team .category {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+}
