@@ -6,4 +6,10 @@
 
 body {
     font-family: "Poppins", serif;
+    background-color: #E0E0E3;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
