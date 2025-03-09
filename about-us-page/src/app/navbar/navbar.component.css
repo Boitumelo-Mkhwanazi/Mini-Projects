@@ -1,0 +1,58 @@
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+}
+
+nav .desktop .nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav .desktop .nav-left ion-icon{
+    font-size: 25px;
+}
+
+nav .desktop .nav-left span {
+    font-size: 20px;
+}
+
+nav .desktop .nav-middle ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+nav .desktop .nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+} 
+
+nav .desktop .nav-right .log-in {
+    padding: 8px 20px;
+    border: 2px solid #767676;
+    border-radius: 5px;
+}
+
+nav .desktop .nav-right .sign-up {
+    background-color: #003100;
+    color: white;
+    padding: 8px 20px;
+    border: 2px solid #767676;
+    border-radius: 5px;
+}
+
+nav .mobile {
+    display: none;
+}

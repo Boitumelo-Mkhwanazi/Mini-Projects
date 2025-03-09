@@ -1,0 +1,28 @@
+<nav>
+    <div class="desktop">
+        <div class="nav-left">
+            <ion-icon name="logo-apple"></ion-icon>
+            <span>Apple</span>
+        </div>
+        <div class="nav-middle">
+            <ul>
+                @for (linkItem of linkItems; track linkItem.id) {
+                    <app-link-item [linkItem]="linkItem" [isActive]="selectedLinkItem === linkItem.id" (getOut)="getActive($event)"/>
+                }
+                
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="log-in">Log in</a>
+            <a href="#" class="sign-up">Sign up</a>
+        </div>
+    </div>
+    <div class="mobile">
+        <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Examples</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+</nav>
