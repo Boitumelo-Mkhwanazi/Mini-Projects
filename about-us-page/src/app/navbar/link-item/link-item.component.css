@@ -10,7 +10,7 @@ li::after {
     left: 0;
     height: 3px;
     width: 0;
-    background-color: #003100;
+    background-color: #006400;
     transition: all 0.3s ease-in-out;
 }
 

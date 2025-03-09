@@ -1,0 +1,13 @@
+.team-member {
+    width: 20rem;
+}
+
+.team-member img {
+    width: 100%;
+}
+
+.team-member span {
+    padding: 1rem 0;
+    text-decoration: underline;
+    cursor: pointer;
+}

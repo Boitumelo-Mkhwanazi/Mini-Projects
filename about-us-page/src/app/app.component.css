@@ -1,0 +1,41 @@
+#hero {
+    width: 100%;
+    padding: 10rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+}
+
+#hero .container h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 65px;
+}
+
+#team {
+    padding: 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#team .categories {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#team .team-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 1.5rem;
+}

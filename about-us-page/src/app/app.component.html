@@ -1,1 +1,25 @@
 <app-navbar />
+
+<section id="hero">
+    <div class="container">
+        <h1>We are the people who make up Apple.COM</h1>
+        <p>
+            Our philosophy is simple; hire great people and give them <br> the
+            resources and support to do their best work
+        </p>
+    </div>
+</section>
+
+<section id="team">
+    <div class="categories">
+        @for (category of categories; track category.id) {
+            <app-category [catergory]="category" />
+        }
+    </div>
+
+    <div class="team-members">
+        @for (teamMember of teamMembers; track teamMember.id) {
+            <app-team-member [data]="teamMember" />
+        }
+    </div>
+</section>
