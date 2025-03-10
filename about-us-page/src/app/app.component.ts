@@ -14,22 +14,28 @@ import { TeamMemberComponent } from './team-section/team-member/team-member.comp
   imports: [NavbarComponent, CategoryComponent, TeamMemberComponent]
 })
 export class AppComponent {
+  selectedCategoryItem : string = 'View All';
+
   categories : linkItem[] = [
     {
       id: '1',
-      name: 'Frontend Developers',
-    }, 
-    {
-      id: '2',
-      name: 'Backend Developers',
+      name: 'View All'
     },
     {
+      id: '2',
+      name: 'Frontend Developer',
+    }, 
+    {
       id: '3',
-      name: 'UI/UX Designers'
+      name: 'Backend Developer',
     },
     {
       id: '4',
-      name: 'Product Managers'
+      name: 'UI/UX Designer'
+    },
+    {
+      id: '5',
+      name: 'Product Manager'
     }
   ]
 
@@ -98,5 +104,16 @@ export class AppComponent {
         course: 'Information Technology',
         experience: '7 years'
     }
-];
+  ];
+
+  get selectedCareer () {
+    if (this.selectedCategoryItem === 'View All') {
+      return this.teamMembers;
+    }
+    return this.teamMembers.filter((teamMember) => teamMember.role === this.selectedCategoryItem)
+  }
+
+  selectedCategory(role: string) {
+    this.selectedCategoryItem = role;
+  }
 }

@@ -13,12 +13,12 @@
 <section id="team">
     <div class="categories">
         @for (category of categories; track category.id) {
-            <app-category [catergory]="category" />
+            <app-category [catergory]="category" (select)="selectedCategory($event)" />
         }
     </div>
 
     <div class="team-members">
-        @for (teamMember of teamMembers; track teamMember.id) {
+        @for (teamMember of selectedCareer; track teamMember.id) {
             <app-team-member [data]="teamMember" />
         }
     </div>
