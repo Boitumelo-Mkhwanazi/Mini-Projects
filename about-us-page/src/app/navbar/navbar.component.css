@@ -6,7 +6,7 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: #e2e2e2;
-    box-shadow: 5px 0 2px #e2e2e2;
+    box-shadow: 5px 0 2px #003100;
 }
 
 nav .desktop {
@@ -51,7 +51,7 @@ nav .desktop .nav-right .log-in {
     border-radius: 5px;
 }
 
-nav .desktop .nav-right .sign-up {
+ .nav-right .sign-up {
     background-color: #003100;
     color: white;
     padding: 8px 20px;
@@ -59,6 +59,61 @@ nav .desktop .nav-right .sign-up {
     border-radius: 5px;
 }
 
+nav .desktop .menu-button {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav .desktop .menu-button .menu-icon,
+nav .desktop .menu-button .menu-icon::before,
+nav .desktop .menu-button .menu-icon::after {
+    background-color: #003100;
+    width: 30px;
+    height: 3.5px;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+nav .desktop .menu-button .menu-icon::before,
+nav .desktop .menu-button .menu-icon::after {
+    content: "";
+}
+
+nav .desktop .menu-button .menu-icon::before {
+    transform: translate(-15px, -10px);
+}
+
+nav .desktop .menu-button .menu-icon::after {
+    transform: translate(-15px, 10px);
+}
+
+nav .desktop .menu-button {
+    display: none;
+}
+
 nav .mobile {
     display: none;
+}
+
+@media (max-width: 600px) {
+    nav .desktop {
+        padding: 1rem 1rem;
+    }
+
+    nav .desktop .nav-middle,
+    nav .desktop .nav-right {
+        display: none;
+    }
+
+    nav .desktop .menu-button {
+        display: block;
+    }
+
 }
