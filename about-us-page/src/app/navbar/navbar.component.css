@@ -94,12 +94,37 @@ nav .desktop .menu-button .menu-icon::after {
     transform: translate(-15px, 10px);
 }
 
+nav .desktop .menu-button.active .menu-icon {
+    background-color: transparent;
+} 
+
+nav .desktop .menu-button.active .menu-icon::before {
+    transform: translateX(-15px) rotate(45deg);
+}
+
+nav .desktop .menu-button.active .menu-icon::after {
+    transform: translateX(-15px) rotate(-45deg);
+}
+
 nav .desktop .menu-button {
     display: none;
+    cursor: pointer;
 }
 
 nav .mobile {
     display: none;
+    background-color: transparent;
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .mobile ul li {
+    padding: 1rem;
+    border-bottom: 0.3px solid #003100;
+}
+
+nav .mobile.open {
+    display: block;
 }
 
 @media (max-width: 600px) {

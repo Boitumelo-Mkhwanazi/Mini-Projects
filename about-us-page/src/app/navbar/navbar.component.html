@@ -16,13 +16,13 @@
             <a href="#" class="log-in">Log in</a>
             <a href="#" class="sign-up">Sign up</a>
         </div>
-        <button class="menu-button">
+        <button class="menu-button" [class.active]="isMenuOpen" (click)="toggleMenu()">
             <div class="menu-icon"></div>
         </button>
     </div>
 
 
-    <div class="mobile">
+    <div class="mobile" [class.open]="isMenuOpen">
         <ul>
             <li><a href="#">Features</a></li>
             <li><a href="#">Examples</a></li>

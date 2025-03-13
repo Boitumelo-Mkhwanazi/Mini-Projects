@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
 import { linkItem  } from './navbar.model';
 import { LinkItemComponent } from "./link-item/link-item.component";
 
@@ -10,6 +10,7 @@ import { LinkItemComponent } from "./link-item/link-item.component";
   imports: [LinkItemComponent]
 })
 export class NavbarComponent {
+  isMenuOpen : boolean = false;
   selectedLinkItem !: String;
   linkItems : linkItem[] = [
     {
@@ -32,5 +33,9 @@ export class NavbarComponent {
 
   getActive(id: String) {
     this.selectedLinkItem = id;
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
