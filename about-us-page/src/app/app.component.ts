@@ -5,13 +5,14 @@ import { linkItem } from './navbar/navbar.model';
 import { CategoryComponent } from './team-section/category/category.component';
 import { teamMember } from './team-section/team-member/team-member.model';
 import { TeamMemberComponent } from './team-section/team-member/team-member.component';
+import { DialogComponent } from './team-section/dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [NavbarComponent, CategoryComponent, TeamMemberComponent]
+  imports: [NavbarComponent, CategoryComponent, TeamMemberComponent, DialogComponent]
 })
 export class AppComponent {
   selectedCategoryItem : string = 'View All';
