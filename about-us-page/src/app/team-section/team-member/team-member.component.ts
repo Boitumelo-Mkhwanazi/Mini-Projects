@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 import { teamMember } from './team-member.model';
 
@@ -10,4 +10,10 @@ import { teamMember } from './team-member.model';
 })
 export class TeamMemberComponent {
   data = input.required<teamMember>();
+  outputData = output<string>();
+  showDialog  = output<boolean>();
+
+  onSelectUser() {
+    this.outputData.emit(this.data().id);
+  }
 }

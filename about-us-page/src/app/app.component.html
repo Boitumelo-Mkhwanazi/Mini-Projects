@@ -1,5 +1,5 @@
-@if (true) {
-    <app-dialog />
+@if (isMenuOpen) {
+    <app-dialog [dataInput]="selectedUser!" (closeMenu)="onCloseDialog()"/>
 }
 
 <app-navbar />
@@ -23,7 +23,7 @@
 
     <div class="team-members">
         @for (teamMember of selectedCareer; track teamMember.id) {
-            <app-team-member [data]="teamMember" />
+            <app-team-member [data]="teamMember" (outputData)="onSelectUser($event)"/>
         }
     </div>
 </section>

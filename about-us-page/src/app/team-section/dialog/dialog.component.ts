@@ -1,4 +1,5 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, input, output } from '@angular/core';
+import { teamMember } from '../team-member/team-member.model';
 
 @Component({
   selector: 'app-dialog',
@@ -8,5 +9,10 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   styleUrl: './dialog.component.css'
 })
 export class DialogComponent {
+  dataInput = input.required<teamMember>();
+  closeMenu = output<void>();
 
+  onCloseDialog() {
+    this.closeMenu.emit()
+  }
 }

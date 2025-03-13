@@ -16,6 +16,8 @@ import { DialogComponent } from './team-section/dialog/dialog.component';
 })
 export class AppComponent {
   selectedCategoryItem : string = 'View All';
+  selectedUserId !: string;
+  isMenuOpen : boolean = false;
 
   categories : linkItem[] = [
     {
@@ -117,4 +119,18 @@ export class AppComponent {
   selectedCategory(role: string) {
     this.selectedCategoryItem = role;
   }
+
+  get selectedUser () {
+    return this.teamMembers.find((teamMember) => teamMember.id === this.selectedUserId)
+  }
+
+  onSelectUser(id: string) {
+    this.selectedUserId = id;
+    this.isMenuOpen = true;
+  }
+
+  onCloseDialog() {
+    this.isMenuOpen = false;
+  }
+
 }

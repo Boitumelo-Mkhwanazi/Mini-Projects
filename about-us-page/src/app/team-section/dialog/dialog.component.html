@@ -1,12 +1,14 @@
-<div class="backdrop">
+<div class="backdrop" (click)="onCloseDialog()">
 <dialog open>
-    <img src="person.png" alt="">
+    <img [src]="dataInput().image" alt="">
     <div class="details">
-        <p>Name: Boitumelo</p>
-        <p>Role: Frontend developer</p>
-        <p>Course: Computer Science</p>
-        <p>Experience: 10</p>
+        <p>Name: {{ dataInput().name }}</p>
+        <p>Role: {{ dataInput().role }}</p>
+        <p>Course: {{ dataInput().course }}</p>
+        <p>Experience: {{ dataInput().experience }}</p>
     </div>
-    <div class="close-icon"><ion-icon name="close-outline"></ion-icon></div>
+    <div class="close-icon" (click)="onCloseDialog()">
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
 </dialog>
 </div>
